@@ -1,230 +1,305 @@
 /* roboto-regular - latin_cyrillic-ext_cyrillic */
-* {
-  @font-face {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
-    src: local(''),
-         url('../fonts/roboto-v29-latin_cyrillic-ext_cyrillic-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-         url('../fonts/roboto-v29-latin_cyrillic-ext_cyrillic-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-  }
-  /* roboto-500 - latin_cyrillic-ext_cyrillic */
-  @font-face {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 500;
-    src: local(''),
-         url('../fonts/roboto-v29-latin_cyrillic-ext_cyrillic-500.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-         url('../fonts/roboto-v29-latin_cyrillic-ext_cyrillic-500.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-  }
-  /* roboto-700 - latin_cyrillic-ext_cyrillic */
-  @font-face {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 700;
-    src: local(''),
-         url('../fonts/roboto-v29-latin_cyrillic-ext_cyrillic-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-         url('../fonts/roboto-v29-latin_cyrillic-ext_cyrillic-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-    }
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  src: url(fonts/roboto-v29-latin_cyrillic-ext_cyrillic-regular.woff2)
+      format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url(fonts/roboto-v29-latin_cyrillic-ext_cyrillic-regular.woff)
+      format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
-  /*Модель розрахунку розміру блоків (нижче)*/
-  html {
-      box-sizing: border-box;
-  }
-  *, *::before, *::after {
-      box-sizing: inherit;
-  }
-  /*Модель розрахунку розміру блоків (текст вище)*/
-  body {
-      height: 100%;
-  }
-  
+/* roboto-500 - latin_cyrillic-ext_cyrillic */
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  src: local(""),
+    url("fonts/roboto-v29-latin_cyrillic-ext_cyrillic-500.woff2")
+      format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("fonts/roboto-v29-latin_cyrillic-ext_cyrillic-500.woff")
+      format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* roboto-700 - latin_cyrillic-ext_cyrillic */
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  src: local(""),
+    url("fonts/roboto-v29-latin_cyrillic-ext_cyrillic-700.woff2")
+      format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("fonts/roboto-v29-latin_cyrillic-ext_cyrillic-700.woff")
+      format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/*Модель розрахунку розміру блоків (нижче)*/
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+/*Модель розрахунку розміру блоків (текст вище)*/
+body {
+  height: 100%;
+
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
 .container {
-    display: flex;
+  display: flex;
 }
 .nav-wrapper {
-    display: flex;
-    flex-direction: column;
-    width: 208px; /*Зробив спочатку 20% а .content-wrapper 80% - не ok. 
+  display: flex;
+  flex-direction: column;
+  width: 210px; /*Зробив спочатку 20% а .content-wrapper 80% - не ok. 
                     Змінив на довжину в пікселях (за розмірами з Figma - також не ok.*/
-    min-height: 100%;
-    background-color: #2E3133;
-    color: #737B80;
+  min-height: 100%;
+  background-color: #2e3133;
+  color: #737b80;
 }
 .content-wrapper {
-    display: flex;
-    flex-direction: column;
-    background-color: #F2F2F2;
-    width: 1152px;
+  display: flex;
+  flex-direction: column;
+  background-color: #f2f2f2;
+  width: calc(100% - 210px);
 }
 .nav-header-wrapper {
-    display: flex;
-    flex-direction: column;
-    min-height: 64px;
-    width: 100%;
-    border-bottom: 1px solid #737B80; /*Не зходиться з межею правої сторони*/
+  display: flex;
+  flex-direction: column;
+  min-height: 64px;
+  width: 100%;
+  border-bottom: 1px solid #737b80; /*Не зходиться з межею правої сторони*/
 }
 .nav-company-logo {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 .b2b {
-    margin: 20.6px 15px 28.4px 5px; /*вставляючи відстань з правої сторони з дизайну - ламає .vector-logo*/
+  margin: 20.6px 15px 28.4px 5px; /*вставляючи відстань з правої сторони з дизайну - ламає .vector-logo*/
 }
 .vector-logo {
-    margin: 24px 15.91px 24px 0;
+  margin: 24px 15.91px 24px 0;
 }
 .nav-client-text {
-    margin: 16px 0px 8px 16px;
-    width: 400;
-    font-size: 14px;
-    line-height: 16px;
+  margin: 16px 0px 8px 16px;
+  width: 400;
+  font-size: 14px;
+  line-height: 16px;
 }
 .nav-hamburger {
-    margin: 18px 16px 8px 16px;
+  margin: 18px 16px 8px 16px;
 }
 .my-client {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 .my-client-info {
-    display: flex;
-    border-bottom: 1px solid #737B80;
+  display: flex;
+  border-bottom: 1px solid #737b80;
 }
 .client-img {
-    margin: 8px 5px 17px 13px;
+  margin: 8px 5px 17px 13px;
 }
 .client-name {
-    display: flex;
-    align-items: center;
-    height: 46px;
-    width: 133px;
-    margin: 8px 11px 17px 0px;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 16px;
-    letter-spacing: 0em;
-    text-align: left;
+  display: flex;
+  align-items: center;
+  height: 46px;
+  width: 133px;
+  margin: 8px 11px 17px 0px;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0em;
+  text-align: left;
 }
 .nav-element {
-    display: flex;
-    flex-direction: row;
-    width: 204px;
-    height: 32px;
-    left: 4px;
+  display: flex;
+  flex-direction: row;
+  width: 204px;
+  height: 32px;
+  left: 4px;
 }
 .nav-element img {
-    width: 16px;
-    height: 16px;
-    margin: 17px 13px 8px 16px;
+  width: 16px;
+  height: 16px;
+  margin: 17px 13px 8px 16px;
+}
+.down-img {
 }
 .nav-title {
-    margin: 17px 13px 8px 16px;
+  margin: 17px 13px 8px 16px;
 }
 .stay-in-touch {
-    width: 100%;
-    height: 304px;
-    border-top: 1px solid #454A4D;
+  width: 100%;
+  height: 304px;
+  border-top: 1px solid #454a4d;
 }
 .in-touch-text {
-    margin: 19px 16px 13px 16px;
+  margin: 19px 16px 13px 16px;
 }
 .social {
-    margin: 0 0 22px 16px;
+  margin: 0 0 22px 16px;
 }
 .my-manager {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    border-top: 1px solid #454A4D;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-top: 1px solid #454a4d;
 }
 .my-manager-text {
-    margin: 21px 33px 10px 16px;
+  margin: 21px 33px 10px 16px;
 }
 .manager-img {
-    margin: 0 4.5px 12px 16px;
+  margin: 0 4.5px 12px 16px;
 }
 .manager-info {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    }
-.manager-name {
-    height: 48px;
-    width: 128px;
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 20px;
-    letter-spacing: 0em;
-    text-align: left;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
-.nav-list {
-    font-weight: 700;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 14px;
-    margin-bottom: 20px;
+.manager-name {
+  height: 48px;
+  width: 128px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+nav {
+  font-weight: 700;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+nav a {
+  color: #737b80;
+  text-decoration: none;
+}
+nav > a,
+nav .group {
+  width: 100%;
+  min-height: 32px;
+}
+nav > a,
+nav .group .title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  height: 32px;
+  padding: 0 15px;
+  position: relative;
+}
+nav > a i,
+nav .group .title i {
+  margin-right: 10px;
+}
+nav .group .title:after {
+  position: absolute;
+  content: "\f107";
+  right: 15px;
+  font-family: "Font Awesome 5 Free";
+}
+nav a:hover,
+nav .group .title:hover {
+  color: #fff;
+  cursor: pointer;
+}
+nav .group .list {
+  height: 0;
+  overflow: hidden;
+  transition-property: height;
+  transition-duration: 1s;
+  transition-timing-function: linear;
+}
+nav .group:hover .list {
+  height: auto;
+}
+nav .group .list a {
+  padding: 5px;
+  margin-left: 35px;
+  display: block;
+  width: 100%;
+  position: relative;
+}
+nav .group .list a::before {
+  content: "\f111";
+  font-family: "Font Awesome 5 Free";
+  font-weight: normal;
+  left: -15px;
+  font-size: 10px;
+  position: absolute;
+}
+nav .group .list a:hover::before {
+  font-weight: bold;
 }
 .my-manager {
-    display: flex;
-    font-family: Roboto;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 16px;
-    letter-spacing: 0em;
-    text-align: left;
-
+  display: flex;
 }
 .manager-communication {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 .block {
-    margin-left: 8px; /*як це зробити правильно*/
-    height: 40px;
-    width: 48px;
-    border-radius: 2px;
-    background-color: #737B80;
+  margin-left: 8px; /*як це зробити правильно*/
+  height: 40px;
+  width: 48px;
+  border-radius: 2px;
+  background-color: #737b80;
 }
 .block .email-img {
-    padding: 12px;
+  padding: 12px;
 }
 .block .phone-img {
-    padding: 12px 16px 12px 16px;
+  padding: 12px 16px 12px 16px;
 }
 .content {
-    display: flex;
-    background-color: #454A4D;
-    height: 100%;
+  display: flex;
+  background-color: #454a4d;
+  height: 100%;
+  padding: 15px;
+  color: #fff;
 }
 .content-header {
-    display: flex;
-    flex-direction: row;
-    background-color: #454A4D;
-    min-height: 64px; 
-    border-bottom: 1px solid #fff;
+  display: flex;
+  flex-direction: row;
+  background-color: #454a4d;
+  min-height: 64px;
+  border-bottom: 1px solid #fff;
 }
 ::placeholder {
-    font-size: 14px;
+  font-size: 14px;
 }
 .search {
-    position: relative;
+  position: relative;
 }
 .search-input {
-    position: relative;
-    width: 256px;
-    height: 32px;
-    border: 1px solid #2EA8E5;
-    border-radius: 4px;
-    margin: 16px 32px 15px 16px;
-    padding-left: 8px;
+  position: relative;
+  width: 256px;
+  height: 32px;
+  border: 1px solid #2ea8e5;
+  border-radius: 4px;
+  margin: 16px 32px 15px 16px;
+  padding-left: 8px;
 }
 .search-img {
-    position: absolute;
-    left: 248px;
-    top: 24px;
+  position: absolute;
+  left: 248px;
+  top: 24px;
 }
-
-  

@@ -8,24 +8,29 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <title>Document</title>
+    <script src="script.js"></script>
 </head>
 <body>
     <div class="container">
         <div class="nav-wrapper">
             <div class="nav-header-wrapper">
                 <div class="nav-company-logo">
-                    <div class="nav-header-logo">LOGO DINMARK</div><!--У figma кожна літера окремо, всі разом не завантажуються тому написав текстом. Як це вирішити?-->
+                    <div class="nav-header-logo">
+                        <img class="company-logo" src="img/logoDinMark.png">
+                    </div>
                         <div>
-                            <img class="b2b" src="img/svg/B2B.svg"> <!--Чи svg? -->
+                            <img class="b2b" src="img/svg/B2B.svg"> 
                         </div>
-                        <div>
-                            <img class="vector-logo" src="img/svg/Vector-header-logo.svg">
+                        <div class="vector-logo">
+                            <i class="fas fa-angle-double-left"></i>
                         </div>
                 </div>
             </div>
             <div class="my-client">
                 <div class="nav-client-text">Мій клієнт</div>
-                <div><img class="nav-hamburger" src="img/svg/hamburger-img.svg"></div>
+                <div class="nav-hamburger">
+                    <i class="fas fa-sliders-h"></i>
+                </div>
             </div>
                 <div class="my-client-info">
                     <div>
@@ -34,8 +39,8 @@
                     <div class="client-name"> Катерина Гусискубная</div>
                 </div>
 
-            <nav>
-                <a href="">
+            <nav class="base-nav">
+                <a href="" class="active">
                     <i class="fas fa-store"></i>
                     <span>Головна</span>
                 </a>
@@ -47,77 +52,91 @@
                     <div class="list">
                         <a href="">Усі товари</a>
                         <a href="">Мої каталоги</a>
-                        <a href="">Пошук номенклатури</a>
+                        <a href="">Співставлення номенклатури</a>
                     </div>
                 </div>
                 <div class="group">
                     <div class="title">
-                        <i class="fas fa-store"></i>
-                        <span>Каталог 2</span>
+                        <i class="fas fa-boxes"></i>
+                        <span>Замовлення</span>
                     </div>
                     <div class="list">
-                        <a href="">Усі товари</a>
-                        <a href="">Мої каталоги</a>
-                        <a href="">Пошук номенклатури</a>
+                        <a href="">Заявки</a>
+                        <a href="">Замовлення</a>
+                        <a href="">Відправлення</a>
                     </div>
                 </div>
+                <div class="group">
+                    <div class="title">
+                        <i class="fab fa-algolia"></i>
+                        <span>Замовлення</span>
+                    </div>
+                    <div class="list">
+                        <a href="">Мої повернення</a>
+                        <a href="">Нове повернення</a>
+                    </div>
+                </div>
+                <div class="group">
+                    <div class="title">
+                        <i class="fas fa-chart-pie"></i>
+                        <span>Фінанси</span>
+                    </div>
+                    <div class="list">
+                        <a href="">Платежі</a>
+                        <a href="">Баланс в системі</a>
+                    </div>
+                </div>
+                <div class="group">
+                    <div class="title">
+                        <i class="fas fa-users"></i>
+                        <span>Отримувачі</span>
+                    </div>
+                    <div class="list">
+                        <a href="">Список отримувачів</a>
+                        <a href="">Новий отримувач</a>
+                    </div>
+                </div>
+                <a href="" class="active">
+                    <i class="far fa-file-alt"></i>
+                    <span>Документи</span>
+                </a>
+                <a href="" class="active">
+                    <i class="fas fa-bullhorn"></i>
+                    <span>Новини</span>
+                </a>
+                <a href="" class="active">
+                    <i class="fas fa-comments"></i>
+                    <span>Довідка</span>
+                </a>
             </nav>
 
-            <div class="nav-list">
-                <div class="nav-element">
-                    <i class="fas fa-store"></i>
-                    <img src="img/svg/main-img.svg">
-                    <div class="nav-title">Головна</div>
-                </div>
-                <div class="nav-element">
-                    <img src="img/svg/catalog-img.svg">
-                    <div class="nav-title">Каталог</div>
-                    <img class="down-img" src="img/svg/down-img.svg">
-                </div>
-                <div class="nav-element">
-                    <img src="img/svg/order-img.svg">
-                    <div class="nav-title">Замовлення</div>
-                    <img class="down-img" src="img/svg/down-img.svg">
-                </div>
-                <div class="nav-element">
-                    <img src="img/svg/return-img.svg">
-                    <div class="nav-title">Повернення</div>
-                    <img class="down-img" src="img/svg/down-img.svg">
-                </div>
-                <div class="nav-element">
-                    <img src="img/svg/finances-img.svg">
-                    <div class="nav-title">Фінанси</div>
-                    <img class="down-img" src="img/svg/down-img.svg">
-                </div>
-                <div class="nav-element">
-                    <img src="img/svg/recipients-img.svg">
-                    <div class="nav-title">Отримувачі</div>
-                    <img class="down-img" src="img/svg/down-img.svg">
-                </div>
-                <div class="nav-element">
-                    <img src="img/svg/documents-img.svg">
-                    <div class="nav-title">Документи</div>
-                </div>
-                <div class="nav-element">
-                    <img src="img/svg/news-img.svg">
-                    <div class="nav-title">Новини</div>
-                </div>
-                <div class="nav-element">
-                    <img src="img/svg/certificate-img.svg">
-                    <div class="nav-title">Довідка</div>
-                </div>
-            </div>
             <div class="stay-in-touch">
                 <div class="in-touch-text">Залишайтесь на зв'язку</div>
                 <div class="social">
                     <a class="social-link social-facebook" target="_blank" href="#">
-                        <img class="social-item" src="img/svg/facebook-logo.svg">        
+                        <div class="social-item">
+                            <i class="fab fa-facebook"></i>
+                        </div>  
                     </a>
                     <a class="social-link social-youtube" target="_blank" href="#">
-                        <img class="social-item" src="img/svg/youtube-logo.svg">
+                        <div class="social-item">
+                            <i class="fab fa-youtube"></i>
+                        </div>
+                    </a>
+                    <a class="social-link social-youtube" target="_blank" href="#">
+                        <div class="social-item">
+                            <i class="fab fa-telegram"></i>
+                        </div>
+                    </a>
+                    <a class="social-link social-youtube" target="_blank" href="#">
+                        <div class="social-item">
+                            <i class="fab fa-instagram"></i>
+                        </div>
                     </a>
                     <a class="social-link social-pinterest" target="_blank" href="#">
-                        <img class="social-item" src="img/svg/pinterest-logo.svg">
+                        <div class="social-item">
+                            <i class="fab fa-pinterest"></i>
+                        </div>
                     </a>
                 </div>
                 <div class="my-manager">
@@ -128,12 +147,17 @@
                     </div>
                     <div class="manager-communication">
                         <div class="block">
-                            <img class="email-img" src="img/svg/manager-email.logo.svg">
+                            <!-- <img class="email-img" src="img/svg/manager-email.logo.svg"> -->
+                            <i class="fas fa-envelope"></i>
                         </div>
                         <div class="block">
-                            <img class="phone-img" src="img/svg/manager-phone-logo.svg">
+                            <!-- <img class="phone-img" src="img/svg/manager-phone-logo.svg"> -->
+                            <i class="fas fa-phone-alt"></i>
                         </div>
-                            
+                        <div class="block">
+                            <!-- <img class="phone-img" src="img/svg/manager-phone-logo.svg"> -->
+                            <i class="fas fa-comment-dots"></i>
+                        </div>    
                     </div>
                 </div>
             </div>
@@ -144,6 +168,108 @@
                     <input class="search-input" type="text" name="search-input" placeholder="Пошук номенклатур">
                     <img class="search-img" src="img/svg/search-img.svg">
                 </form>
+                <i class="fas fa-wallet"></i>
+                <div class="header-balance">+10 000 000, 00 ₴</div>
+                <div class="switch-container">
+                        <div class="first-checkbox">
+                            <label class="control-label"> з ПДВ</label>
+                            <input class="first" type="checkbox" checked="">
+                            <label class="control-label"> без ПДВ</label>
+                        </div>
+                        <div class="second-checkbox">
+                            <label class="control-label"> за 1 шт.</label>
+                            <input class="second" type="checkbox" checked="">
+                            <label class="control-label"> за 100 шт.</label>
+                        </div>
+                </div>
+                <div class="my-info">
+                    <i class="far fa-heart"></i>
+                    <div class="data-box heart">5 834</div>
+                </div>
+                <div class="my-info">
+                    <i class="fas fa-truck"></i>
+                    <div class="data-box truck">5 834</div>
+                </div>
+                <div class="my-info">
+                    <i class="fas fa-shopping-cart"></i>
+                    <div class="data-box shopping-cart">5 834</div>
+                </div>
+                    <!-- <div class="header-client-nav">
+                       <ul>
+                           <li><a>Some VIP client</a>
+                               <ul>
+                                    <li>
+                                        <a href="">Ім'я Прізвище</a>
+                                        <a href="">Редагування</a>
+                                        <a href="">Лог дій</a>
+                                        <a href="">dinmark.</a>
+                                        <a href="">Вихід</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div> -->
+                 <div class="language">
+                     <span>Укр</span>
+                     <hr>
+                     <span>Рос</span>
+                 </div> 
+                 
+
+                 
+
+
+                 <div class="client-nav">
+                     <img src="img/client-img.png">
+                     <span>Анна Квінто</span>
+                     <i class="fas fa-chevron-down"></i>
+                     
+
+                     <div id="header-client">
+                        <h5 class="bb">
+                            <img src="img/client-img.png" alt="">
+                            Анна Квінто
+                        </h5>
+   
+   
+                        <a href="">
+                            <i class="fas fa-cog"></i>
+                            Редагування профілю
+                        </a>
+                        <a href="">
+                            <i class="fas fa-network-wired"></i></i>
+                            Лог дій
+                        </a>
+                        <a href="">
+                            <i class="fas fa-globe"></i>
+                            website.com.ua
+                        </a>
+                        <a href=""><i class="fas fa-sign-out-alt"></i>Вихід</a>
+                    </div>
+                 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <i class="fas fa-question-circle"></i>
+                    <div class="question-num">78</div>
+                 
             </div>
             <div class="content">Content</div>
         </div>
